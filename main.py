@@ -1,3 +1,4 @@
+# Importing required libraries
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from typing import Optional
@@ -5,7 +6,7 @@ from PIL import Image
 import qrcode
 
 
-app = FastAPI()
+app = FastAPI() # Create FastAPI instance
 
 class Url(BaseModel):
     url: str = Field("localhost:8000")
